@@ -24,3 +24,28 @@
         # num_third = num_third_n
         # print num_third
  
+n = int(input("Enter the length of the sequence: ")) # Do not change this line
+
+if n == 1:
+    num_first = 1
+if n == 2:
+    num_first = 1
+    num_second = 2
+if n >= 3:
+    num_first = 1
+    num_second = 2
+    num_third = 3
+
+for i in range(1, (n + 1)):
+    if i == 1:
+        print(num_first)
+    if i == 2:
+        print(num_second)
+    if i == 3:
+        print(num_third)
+    if i > 3:
+        num_third_n = num_first + num_second + num_third
+        num_first = num_second
+        num_second = num_third
+        num_third = num_third_n
+        print(num_third)
